@@ -1,7 +1,11 @@
 <?php
-$dominio = "localhost";
+$dominio = "sistemadecalidad.csgabriel.edu.ec";
+
 $conexion =mysql_connect('localhost', 'root', '');mysql_select_db('sistema_calidad');
-$path = "http://".$dominio."/scge";
+
+mysql_set_charset('utf8');
+
+$path = "http://".$dominio;
 
 
 ?>

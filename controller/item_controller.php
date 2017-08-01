@@ -1,3 +1,22 @@
+	<script>
+    
+var selector = '.nav a';
+
+$(selector).on('click', function(){
+    $(selector).removeClass('active');
+    $(this).addClass('active');
+});
+ 
+ 
+</script>
+
+
+<style>
+ a.active {
+    color: red;
+}
+</style>    
+
 <?php
 session_start();
 
@@ -52,7 +71,7 @@ echo $tabla2;
 foreach ($datos3 as $key => $value) {
 
 
-   $tabla3 .= "  <ul>
+   $tabla3 .= "  <ul class='nav'>
 
                    <a href=#  onClick= \"  procesarIndicador('".$datos3[$key]['id_indicador']."','".$datos3[$key]['indicador_decripcion']."')\" >  <td>".$datos3[$key]['indicador_decripcion']."</td> </a>
 

@@ -10,15 +10,9 @@ try {
 }
 
 $objAnalisisT = new pregunta($db);
-//print_r($_POST);
 
-//echo "indicador=".$_REQUEST['idindicador'];
-//echo "archivo=".$_FILES['txt_evidenciapdf'];
-/*echo "evidencia=".$_POST['txtevidencia'];
-echo "chk_respuesta=".$_POST['chk_respuesta'];
-echo "observaciones".$_POST['txtobservaciones'];
-echo "comentario".$_POST['txtComentario'];
-*/
+
+$datosE = $objAnalisisT->getEncuesta();
 
 
 

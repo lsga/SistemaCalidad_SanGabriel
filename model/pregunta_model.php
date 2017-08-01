@@ -1,3 +1,4 @@
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <?php
 
 class pregunta{
@@ -38,6 +39,26 @@ public function getPregunta ($codigo)
 
         }
 
+public function getEstadoEncuesta ()
+        {
+    // obtengo el estado de la encuesta 
+    $sqlEncuesta = " SELECT id_encuesta, DATE_FORMAT(fecha_inicio, '%Y-%m-%d') "
+                 . "AS fechainicio, DATE_FORMAT(fecha_fin, '%Y-%m-%d') AS fechafin "
+                 . "from encuesta WHERE id_encuesta='".$_COOKIE['id_encuesta']."'"
+                 . " and NOW() BETWEEN fecha_inicio and fecha_fin";
+    $q = $this->db->prepare($sqlEncuesta);
+    $q->execute();
+    $resultado = $q->fetchAll();
+   
+    if($resultado)
+        {
+            return  '';
+         }
+    else
+        {
+          return  " disabled='disabled'";
+        } 
+        }									
     public function getItem ($codigo)
         {
 
@@ -222,6 +243,19 @@ public function getPregunta ($codigo)
          public function getAmbito(){
 
                $sql = " select * from ambito";
+
+              //echo $sql.'<br>';
+                  $q = $this->db->prepare($sql);
+
+
+                  $res = $q->execute();
+                  $result = $q->fetchAll();
+                  return $result;
+
+        }
+		public function getEncuesta(){
+
+               $sql = " select * from encuesta";
 
 
                    //echo $sql.'<br>';
