@@ -1,6 +1,5 @@
-<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <?php
-
+session_start();
 class pregunta{
 
     public $db;
@@ -9,10 +8,22 @@ class pregunta{
         $this->db = $db;
     }
 
+    public function getFinalizarEncuesta ($idEncuesta){
 
-public function getPregunta ($codigo)
+
+           $sqlUpdate =" update encuesta
+                         set estado ='terminada'
+                         where id_encuesta = ".$idEncuesta." ";
+
+                        $q = $this->db->prepare($sqlUpdate);
+                        $q->execute();
+                        $res = $q->fetchAll();
+    }
+
+
+
+    public function getPregunta ($codigo)
         {
-
                  $sql = " select
                                        p.id_pregunta,
                                        p.nombrepregunta,
@@ -29,7 +40,7 @@ public function getPregunta ($codigo)
                                         where  p.id_pregunta =".$codigo;
 
 
-                   //echo $sql.'<br>';
+                    //echo $sql.'<br>';
                   $q = $this->db->prepare($sql);
 
 
@@ -41,15 +52,15 @@ public function getPregunta ($codigo)
 
 public function getEstadoEncuesta ()
         {
-    // obtengo el estado de la encuesta 
-    $sqlEncuesta = " SELECT id_encuesta, DATE_FORMAT(fecha_inicio, '%Y-%m-%d') "
+    // obtengo el estado de la encuesta
+    $sqlEncuesta = "select id_encuesta, DATE_FORMAT(fecha_inicio, '%Y-%m-%d') "
                  . "AS fechainicio, DATE_FORMAT(fecha_fin, '%Y-%m-%d') AS fechafin "
                  . "from encuesta WHERE id_encuesta='".$_COOKIE['id_encuesta']."'"
                  . " and NOW() BETWEEN fecha_inicio and fecha_fin";
     $q = $this->db->prepare($sqlEncuesta);
     $q->execute();
     $resultado = $q->fetchAll();
-   
+
     if($resultado)
         {
             return  '';
@@ -57,8 +68,9 @@ public function getEstadoEncuesta ()
     else
         {
           return  " disabled='disabled'";
-        } 
-        }									
+        }
+        }
+
     public function getItem ($codigo)
         {
 
@@ -116,22 +128,23 @@ public function getEstadoEncuesta ()
                 if($result[0]['eliminado'] == 1){
 
 
-                        $sqlUpdate =" update respuesta_pregunta set eliminado =1  where id_pregunta= ".$pregunta." and id_respuesta <> ".$respuesta.";
-                                update respuesta_pregunta set eliminado =0 where id_pregunta= ".$pregunta." and id_respuesta = ".$respuesta;
+                        $sqlUpdate =" update respuesta_pregunta set eliminado =1  where id_pregunta= ".$pregunta." and id_respuesta <> ".$respuesta." ;
+                                update respuesta_pregunta set eliminado =0 where id_pregunta= ".$pregunta." and id_respuesta = ".$respuesta. "";
 
-                        echo $sqlUpdate;
+                        //echo $sqlUpdate;
                         $q = $this->db->prepare($sqlUpdate);
                         $q->execute();
                         $res = $q->fetchAll();
                     }
                 }  else {
 
-                  $sql = " update respuesta_pregunta set eliminado =1  where id_pregunta= ".$pregunta." and id_respuesta <> ".$respuesta.";
+                  $sql = " update respuesta_pregunta set eliminado =1  where id_pregunta= ".$pregunta." and id_respuesta <> ".$respuesta." and id_encuesta= ".$_COOKIE['id_encuesta'].";
                       INSERT  INTO respuesta_pregunta(
                     id_pregunta,
-                    id_respuesta) values ('".$pregunta."','".$respuesta."') ";
+                    id_respuesta,
+                    id_encuesta) values ('".$pregunta."','".$respuesta."','".$_COOKIE['id_encuesta']."' ) ";
 
-                 // echo $sql;
+                //  echo $sql;
 
                 $q = $this->db->prepare($sql);
                 $q->execute();
@@ -154,18 +167,18 @@ public function getEstadoEncuesta ()
                 $sqlEvidencia .=", evidencia= '".$escrituraspdf."'";
 
             $sqlEvidencia .=" where id_pregunta= '".$pregunta."' ";
-            
+
 
               //echo $sqlEvidencia;
-            
+
 
             $q = $this->db->prepare($sqlEvidencia);
             $q->execute();
             $res = $q->fetchAll();
-              
-          
-             
-       
+
+
+
+
           }
 
             public function insertar_evidencia($evidencia,$pregunta,$fileEscritura)
@@ -213,7 +226,8 @@ public function getEstadoEncuesta ()
                          . "respuesta_pregunta rp on rp.eliminado = 0 "
                          . "and p.id_pregunta = rp.id_pregunta"
                          . " and r.id_respuesta = rp.id_respuesta join indicadores i on "
-                         . "r.id_indicador= i.id_indicador where 1=1 ORDER BY p.id_pregunta";
+                         . "r.id_indicador= i.id_indicador join encuesta e on rp.id_encuesta = e.id_encuesta"
+                         . " where 1=1 and e.id_encuesta='".$_COOKIE['id_encuesta']."'"." ORDER BY p.id_pregunta";
 
 
                    //echo $sql.'<br>';
@@ -244,7 +258,8 @@ public function getEstadoEncuesta ()
 
                $sql = " select * from ambito";
 
-              //echo $sql.'<br>';
+
+                   //echo $sql.'<br>';
                   $q = $this->db->prepare($sql);
 
 
@@ -253,7 +268,10 @@ public function getEstadoEncuesta ()
                   return $result;
 
         }
-		public function getEncuesta(){
+
+
+
+        public function getEncuesta(){
 
                $sql = " select * from encuesta";
 
@@ -267,6 +285,11 @@ public function getEstadoEncuesta ()
                   return $result;
 
         }
+
+
+
+
+
 
 
 
