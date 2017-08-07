@@ -22,13 +22,13 @@ $sumartoria6= $datos[26]['ponderacion_respuesta']+$datos[27]['ponderacion_respue
 
       <?php
           $dataPoints = array(
-              array("y" => $datos[26]['ponderacion_respuesta'], "label" => $datos[26]['indicador_decripcion'].' '.$datos[26]['descripcionrespuesta']),
-              array("y" => $datos[27]['ponderacion_respuesta'], "label" => $datos[27]['indicador_decripcion'].' '.$datos[27]['descripcionrespuesta']),
-              array("y" => $datos[28]['ponderacion_respuesta'], "label" => $datos[28]['indicador_decripcion'].' '.$datos[28]['descripcionrespuesta']),
-              array("y" => $datos[29]['ponderacion_respuesta'], "label" => $datos[29]['indicador_decripcion'].' '.$datos[29]['descripcionrespuesta']),
-              array("y" => $datos[30]['ponderacion_respuesta'], "label" => $datos[30]['indicador_decripcion'].' '.$datos[30]['descripcionrespuesta']),
-              array("y" => $datos[31]['ponderacion_respuesta'], "label" => $datos[31]['indicador_decripcion'].' '.$datos[31]['descripcionrespuesta']),
-              array("y" => $datos[32]['ponderacion_respuesta'], "label" => $datos[32]['indicador_decripcion'].' '.$datos[32]['descripcionrespuesta']),
+              array("y" => $datos[26]['ponderacion_respuesta'], "label" => $datos[26]['indicador_decripcion'].' '.utf8_encode($datos[26]['descripcionrespuesta'])),
+              array("y" => $datos[27]['ponderacion_respuesta'], "label" => $datos[27]['indicador_decripcion'].' '.utf8_encode($datos[27]['descripcionrespuesta'])),
+              array("y" => $datos[28]['ponderacion_respuesta'], "label" => $datos[28]['indicador_decripcion'].' '.utf8_encode($datos[28]['descripcionrespuesta'])),
+              array("y" => $datos[29]['ponderacion_respuesta'], "label" => $datos[29]['indicador_decripcion'].' '.utf8_encode($datos[29]['descripcionrespuesta'])),
+              array("y" => $datos[30]['ponderacion_respuesta'], "label" => $datos[30]['indicador_decripcion'].' '.utf8_encode($datos[30]['descripcionrespuesta'])),
+              array("y" => $datos[31]['ponderacion_respuesta'], "label" => $datos[31]['indicador_decripcion'].' '.utf8_encode($datos[31]['descripcionrespuesta'])),
+              array("y" => $datos[32]['ponderacion_respuesta'], "label" => $datos[32]['indicador_decripcion'].' '.utf8_encode($datos[32]['descripcionrespuesta'])),
           );
       ?>
 
@@ -42,7 +42,7 @@ $sumartoria6= $datos[26]['ponderacion_respuesta']+$datos[27]['ponderacion_respue
                       theme: "theme2",
                       animationEnabled: true,
                       title: {
-                          text: "<?php echo $datos4[5]['NOMBREITEM'] ?> <?php echo round($total6*100),'%' ?>"
+                          text: "<?php echo utf8_encode($datos4[5]['NOMBREITEM']) ?> <?php echo round($total6*100),'%' ?>"
                       },
                       axisY: {
                           title: "Puntos",

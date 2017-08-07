@@ -74,22 +74,22 @@ require_once dirname(dirname(__FILE__)).'/controller/ambito_controller.php';
 
     <?php
         $dataPointsBar = array(
-            array("y" => round($total16*100),'%', label => $datos4[15]['NOMBREITEM'], color => "#efa827"),
-            array("y" => round($total15*100),'%', label => $datos4[14]['NOMBREITEM'], color => "#efa827"),
-            array("y" => round($total14*100),'%', label => $datos4[13]['NOMBREITEM'], color => "#efa827"),
-            array("y" => round($total13*100),'%', label => $datos4[12]['NOMBREITEM'], color => "#227122"),
-            array("y" => round($total12*100),'%', label => $datos4[11]['NOMBREITEM'], color => "#227122"),
-            array("y" => round($total11*100),'%', label => $datos4[10]['NOMBREITEM'], color => "#227122"),
-            array("y" => round($total10*100),'%', label => $datos4[9]['NOMBREITEM'], color => "#227122"),
-            array("y" => round($total9*100),'%', label => $datos4[8]['NOMBREITEM'], color => "#ca0e0e"),
-            array("y" => round($total8*100),'%', label => $datos4[7]['NOMBREITEM'], color => "#ca0e0e"),
-            array("y" => round($total7*100),'%', label => $datos4[6]['NOMBREITEM'], color => "#ca0e0e"),
-            array("y" => round($total6*100),'%', label => $datos4[5]['NOMBREITEM'], color => "#ca0e0e"),
-            array("y" => round($total5*100),'%', label => $datos4[4]['NOMBREITEM'], color => "#ca0e0e"),
-            array("y" => round($total4*100),'%', label => $datos4[3]['NOMBREITEM'], color => "#2196F3"),
-            array("y" => round($total3*100),'%', label => $datos4[2]['NOMBREITEM'], color => "#2196F3"),
-            array("y" => round($total2*100),'%', label => $datos4[1]['NOMBREITEM'], color => "#2196F3"),
-            array("y" => round($total1*100),'%', label => $datos4[0]['NOMBREITEM'], color => "#2196F3"),
+            array("y" => round($total16*100),'%', label => utf8_encode($datos4[15]['NOMBREITEM']), color => "#efa827"),
+            array("y" => round($total15*100),'%', label => utf8_encode($datos4[14]['NOMBREITEM']), color => "#efa827"),
+            array("y" => round($total14*100),'%', label => utf8_encode($datos4[13]['NOMBREITEM']), color => "#efa827"),
+            array("y" => round($total13*100),'%', label => utf8_encode($datos4[12]['NOMBREITEM']), color => "#227122"),
+            array("y" => round($total12*100),'%', label => utf8_encode($datos4[11]['NOMBREITEM']), color => "#227122"),
+            array("y" => round($total11*100),'%', label => utf8_encode($datos4[10]['NOMBREITEM']), color => "#227122"),
+            array("y" => round($total10*100),'%', label => utf8_encode($datos4[9]['NOMBREITEM']), color => "#227122"),
+            array("y" => round($total9*100),'%', label => utf8_encode($datos4[8]['NOMBREITEM']), color => "#ca0e0e"),
+            array("y" => round($total8*100),'%', label => utf8_encode($datos4[7]['NOMBREITEM']), color => "#ca0e0e"),
+            array("y" => round($total7*100),'%', label => utf8_encode($datos4[6]['NOMBREITEM']), color => "#ca0e0e"),
+            array("y" => round($total6*100),'%', label => utf8_encode($datos4[5]['NOMBREITEM']), color => "#ca0e0e"),
+            array("y" => round($total5*100),'%', label => utf8_encode($datos4[4]['NOMBREITEM']), color => "#ca0e0e"),
+            array("y" => round($total4*100),'%', label => utf8_encode($datos4[3]['NOMBREITEM']), color => "#2196F3"),
+            array("y" => round($total3*100),'%', label => utf8_encode($datos4[2]['NOMBREITEM']), color => "#2196F3"),
+            array("y" => round($total2*100),'%', label => utf8_encode($datos4[1]['NOMBREITEM']), color => "#2196F3"),
+            array("y" => round($total1*100),'%', label => utf8_encode($datos4[0]['NOMBREITEM']), color => "#2196F3"),
         );
     ?>
 

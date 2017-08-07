@@ -20,12 +20,12 @@ require_once dirname(dirname(__FILE__)).'/controller/ambito_controller.php';
 
       <?php
           $dataPoints = array(
-              array("y" => $datos[0]['ponderacion_respuesta'], "label" => $datos[0]['indicador_decripcion'].' '.$datos[0]['descripcionrespuesta']),
-              array("y" => $datos[1]['ponderacion_respuesta'], "label" => $datos[1]['indicador_decripcion'].' '.$datos[1]['descripcionrespuesta']),
-              array("y" => $datos[2]['ponderacion_respuesta'], "label" => $datos[2]['indicador_decripcion'].' '.$datos[2]['descripcionrespuesta']),
-              array("y" => $datos[3]['ponderacion_respuesta'], "label" => $datos[3]['indicador_decripcion'].' '.$datos[3]['descripcionrespuesta']),
-              array("y" => $datos[4]['ponderacion_respuesta'], "label" => $datos[4]['indicador_decripcion'].' '.$datos[4]['descripcionrespuesta']),
-              array("y" => $datos[5]['ponderacion_respuesta'], "label" => $datos[5]['indicador_decripcion'].' '.$datos[5]['descripcionrespuesta']),
+              array("y" => $datos[0]['ponderacion_respuesta'], "label" => $datos[0]['indicador_decripcion'].' '.utf8_encode($datos[0]['descripcionrespuesta'])),
+              array("y" => $datos[1]['ponderacion_respuesta'], "label" => $datos[1]['indicador_decripcion'].' '.utf8_encode($datos[1]['descripcionrespuesta'])),
+              array("y" => $datos[2]['ponderacion_respuesta'], "label" => $datos[2]['indicador_decripcion'].' '.utf8_encode($datos[2]['descripcionrespuesta'])),
+              array("y" => $datos[3]['ponderacion_respuesta'], "label" => $datos[3]['indicador_decripcion'].' '.utf8_encode($datos[3]['descripcionrespuesta'])),
+              array("y" => $datos[4]['ponderacion_respuesta'], "label" => $datos[4]['indicador_decripcion'].' '.utf8_encode($datos[4]['descripcionrespuesta'])),
+              array("y" => $datos[5]['ponderacion_respuesta'], "label" => $datos[5]['indicador_decripcion'].' '.utf8_encode($datos[5]['descripcionrespuesta'])),
           );
       ?>
 
@@ -39,7 +39,7 @@ require_once dirname(dirname(__FILE__)).'/controller/ambito_controller.php';
                       theme: "theme2",
                       animationEnabled: true,
                       title: {
-                          text: "<?php echo $datos4[0]['NOMBREITEM'] ?> <?php echo round($total1*100),'%' ?>"
+                          text: "<?php echo utf8_encode($datos4[0]['NOMBREITEM']) ?> <?php echo round($total1*100),'%' ?>"
                       },
                       axisY: {
                           title: "Puntos",

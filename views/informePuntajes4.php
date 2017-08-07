@@ -20,10 +20,10 @@ require_once dirname(dirname(__FILE__)).'/controller/ambito_controller.php';
 
       <?php
           $dataPoints = array(
-              array("y" => $datos[18]['ponderacion_respuesta'], "label" => $datos[18]['indicador_decripcion'].' '.$datos[18]['descripcionrespuesta']),
-              array("y" => $datos[19]['ponderacion_respuesta'], "label" => $datos[19]['indicador_decripcion'].' '.$datos[19]['descripcionrespuesta']),
-              array("y" => $datos[20]['ponderacion_respuesta'], "label" => $datos[20]['indicador_decripcion'].' '.$datos[20]['descripcionrespuesta']),
-              array("y" => $datos[21]['ponderacion_respuesta'], "label" => $datos[21]['indicador_decripcion'].' '.$datos[21]['descripcionrespuesta']),
+              array("y" => $datos[18]['ponderacion_respuesta'], "label" => $datos[18]['indicador_decripcion'].' '.utf8_encode($datos[18]['descripcionrespuesta'])),
+              array("y" => $datos[19]['ponderacion_respuesta'], "label" => $datos[19]['indicador_decripcion'].' '.utf8_encode($datos[19]['descripcionrespuesta'])),
+              array("y" => $datos[20]['ponderacion_respuesta'], "label" => $datos[20]['indicador_decripcion'].' '.utf8_encode($datos[20]['descripcionrespuesta'])),
+              array("y" => $datos[21]['ponderacion_respuesta'], "label" => $datos[21]['indicador_decripcion'].' '.utf8_encode($datos[21]['descripcionrespuesta'])),
           );
       ?>
 
@@ -37,7 +37,7 @@ require_once dirname(dirname(__FILE__)).'/controller/ambito_controller.php';
                       theme: "theme2",
                       animationEnabled: true,
                       title: {
-                          text: "<?php echo $datos4[3]['NOMBREITEM'] ?> <?php echo round($total4*100),'%' ?>"
+                          text: "<?php echo utf8_encode($datos4[3]['NOMBREITEM']) ?> <?php echo round($total4*100),'%' ?>"
                       },
                       axisY: {
                           title: "Puntos",

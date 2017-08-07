@@ -84,10 +84,10 @@ require_once dirname(dirname(__FILE__)).'/controller/ambito_controller.php';
       <?php
           $dataPoints = array(
               array("y" => round($puntajeFinal*100),'%', "label" => "Puntaje Institucional"),
-			  array("y" => round($ambito1*100),'%', "label" => $datos1[0]['NOMBREAMBITO']),
-              array("y" => round($ambito2*100),'%', "label" => $datos1[1]['NOMBREAMBITO']),
-              array("y" => round($ambito3*100),'%', "label" => $datos1[2]['NOMBREAMBITO']),
-              array("y" => round($ambito4*100),'%', "label" => $datos1[3]['NOMBREAMBITO']),
+			  array("y" => round($ambito1*100),'%', "label" => utf8_encode($datos1[0]['NOMBREAMBITO'])),
+              array("y" => round($ambito2*100),'%', "label" => utf8_encode($datos1[1]['NOMBREAMBITO'])),
+              array("y" => round($ambito3*100),'%', "label" => utf8_encode($datos1[2]['NOMBREAMBITO'])),
+              array("y" => round($ambito4*100),'%', "label" => utf8_encode($datos1[3]['NOMBREAMBITO'])),
           );
       ?>
 
@@ -101,7 +101,7 @@ require_once dirname(dirname(__FILE__)).'/controller/ambito_controller.php';
                       theme: "theme2",
                       animationEnabled: true,
                       title: {
-                          text: "Informe Final Ambitos"
+                          text: "Informe Final Ámbitos"
                       },
                       axisY: {
                           title: "Porcentajes",
@@ -111,7 +111,7 @@ require_once dirname(dirname(__FILE__)).'/controller/ambito_controller.php';
                       },
                       axisX: {
                           interval: 1,
-                          title: "Ambitos",
+                          title: "Ámbitos",
                           titleFontColor: "black",
                           labelFontSize: 15,
                           labelAngle: 0,

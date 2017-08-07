@@ -56,14 +56,14 @@ require_once dirname(dirname(__FILE__)).'/controller/item_controller.php';
         <tbody>
 
              <BR>
-             
-             
+
+
             <tr id="package1" class="accordion-toggle" data-toggle="collapse" data-parent="#OrderPackages" data-target=".packageDetails1">
-           
-             <th onclick="mostrar_item(1,'<?php echo $datos1[0]['NOMBREAMBITO'];?>')" ><?php echo $datos1[0]['NOMBREAMBITO'];?>  </th>
+
+             <th onclick="mostrar_item(1,'<?php echo $datos1[0]['NOMBREAMBITO'];?>')" ><?php echo utf8_encode($datos1[0]['NOMBREAMBITO']);?>  </th>
                 <th></th>
              </tr>
-            
+
             <tr>
                 <td colspan="3" class="hiddenRow">
                     <div class="accordion-body collapse packageDetails1" id="accordion1" >
@@ -81,11 +81,11 @@ require_once dirname(dirname(__FILE__)).'/controller/item_controller.php';
             </tr>
 
            <tr id="package2" class="accordion-toggle" data-toggle="collapse" data-parent="#OrderPackages" data-target=".packageDetails2">
-                 <th onclick="mostrar_item(2,'<?php echo $datos1[1]['NOMBREAMBITO'];?>')" ><?php echo $datos1[1]['NOMBREAMBITO'];?>  </th>
+                 <th onclick="mostrar_item(2,'<?php echo $datos1[1]['NOMBREAMBITO'];?>')" ><?php echo utf8_encode($datos1[1]['NOMBREAMBITO']);?>  </th>
 
                 <th></th>
 
-             
+
                 </td>
             </tr>
               <tr>
@@ -103,10 +103,10 @@ require_once dirname(dirname(__FILE__)).'/controller/item_controller.php';
             </tr>
 
                <tr id="package3" class="accordion-toggle" data-toggle="collapse" data-parent="#OrderPackages" data-target=".packageDetails3">
-                <th  onclick="mostrar_item(3,'<?php echo $datos1[2]['NOMBREAMBITO'];?>')"><?php echo $datos1[2]['NOMBREAMBITO'];?></th>
+                <th  onclick="mostrar_item(3,'<?php echo $datos1[2]['NOMBREAMBITO'];?>')"><?php echo utf8_encode($datos1[2]['NOMBREAMBITO']);?></th>
 
                 <th></th>
-            
+
             </tr>
 
               <tr>
@@ -125,10 +125,10 @@ require_once dirname(dirname(__FILE__)).'/controller/item_controller.php';
             </tr>
 
             <tr id="package4" class="accordion-toggle" data-toggle="collapse" data-parent="#OrderPackages" data-target=".packageDetails4">
-                <th onclick="mostrar_item(4,'<?php echo $datos1[3]['NOMBREAMBITO'];?>')" ><?php echo $datos1[3]['NOMBREAMBITO'];?></th>
+                <th onclick="mostrar_item(4,'<?php echo $datos1[3]['NOMBREAMBITO'];?>')" ><?php echo utf8_encode($datos1[3]['NOMBREAMBITO']);?></th>
 
                 <th ></th>
-               
+
             </tr>
 
               <tr>
@@ -158,4 +158,3 @@ require_once dirname(dirname(__FILE__)).'/controller/item_controller.php';
      </div>
 
 </div>
-

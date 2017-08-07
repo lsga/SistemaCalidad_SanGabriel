@@ -218,7 +218,7 @@ foreach ($datos as $key => $value) {
   </head>
 <form name="frmIngresoRespuestas" action="" method="post"  enctype="multipart/form-data">
     <div id='messageAT'></div>
-    <h3><?php echo $datos1[0]['NOMBREAMBITO']; ?> <!--(<?php echo round($datos1[0]['PonderacionAmbito']*100),'%';    ?>)--></h3>
+    <h3><?php echo utf8_encode($datos1[0]['NOMBREAMBITO']); ?> <!--(<?php echo round($datos1[0]['PonderacionAmbito']*100),'%';    ?>)--></h3>
     <table width="100%" class="TableDatos">
         <thead>
             <tr class="fondoTextoTitulo">
@@ -232,7 +232,7 @@ foreach ($datos as $key => $value) {
           <tr>
             <td>
               <?php
-                    echo $datos4[0]['NOMBREITEM'];
+                    echo utf8_encode($datos4[0]['NOMBREITEM']);
               ?>
             </td>
             <td>
@@ -248,7 +248,7 @@ foreach ($datos as $key => $value) {
           <tr>
             <td>
               <?php
-                    echo $datos4[1]['NOMBREITEM'];
+                    echo utf8_encode($datos4[1]['NOMBREITEM']);
               ?>
             </td>
             <td>
@@ -264,7 +264,7 @@ foreach ($datos as $key => $value) {
           <tr>
             <td>
               <?php
-                    echo $datos4[2]['NOMBREITEM'];
+                    echo utf8_encode($datos4[2]['NOMBREITEM']);
               ?>
             </td>
             <td>
@@ -280,7 +280,7 @@ foreach ($datos as $key => $value) {
           <tr>
             <td>
               <?php
-                    echo $datos4[3]['NOMBREITEM'];
+                    echo utf8_encode($datos4[3]['NOMBREITEM']);
               ?>
             </td>
             <td>
@@ -298,7 +298,7 @@ foreach ($datos as $key => $value) {
           <tr class="fondoTextoTitulo">
               <td style="border:none;"></td>
               <td style="border:none;"></td>
-              <td style="border:none;">Porcentaje de logro del ámbito: <?php echo round($ambito1*100),'%' ; ?> </td>
+              <td style="border:none;" colspan="2">Porcentaje de logro del ámbito: <?php echo round($ambito1*100),'%' ; ?> </td>
         </thead>
     </table>
     <input type="button" value="Ver Grafico" onclick="graficoItemsAmbito1()">
@@ -306,7 +306,7 @@ foreach ($datos as $key => $value) {
 
 <form name="frmIngresoRespuestas" action="" method="post"  enctype="multipart/form-data">
     <div id='messageAT'></div>
-    <h3><?php echo $datos1[1]['NOMBREAMBITO']; ?> <!--(<?php echo round($datos1[1]['PonderacionAmbito']*100),'%';    ?>)--></h3>
+    <h3><?php echo utf8_encode($datos1[1]['NOMBREAMBITO']); ?> <!--(<?php echo round($datos1[1]['PonderacionAmbito']*100),'%';    ?>)--></h3>
     <table width="100%" class="TableDatos">
         <thead>
             <tr class="fondoTextoTitulo">
@@ -320,7 +320,7 @@ foreach ($datos as $key => $value) {
           <tr>
             <td>
               <?php
-                    echo $datos4[4]['NOMBREITEM'];
+                    echo utf8_encode($datos4[4]['NOMBREITEM']);
               ?>
             </td>
             <td>
@@ -342,7 +342,7 @@ foreach ($datos as $key => $value) {
           <tr>
             <td>
               <?php
-                    echo $datos4[5]['NOMBREITEM'];
+                    echo utf8_encode($datos4[5]['NOMBREITEM']);
               ?>
             </td>
             <td>
@@ -358,7 +358,7 @@ foreach ($datos as $key => $value) {
           <tr>
             <td>
               <?php
-                    echo $datos4[6]['NOMBREITEM'];
+                    echo utf8_encode($datos4[6]['NOMBREITEM']);
               ?>
             </td>
             <td>
@@ -374,7 +374,7 @@ foreach ($datos as $key => $value) {
           <tr>
             <td>
               <?php
-                    echo $datos4[7]['NOMBREITEM'];
+                    echo utf8_encode($datos4[7]['NOMBREITEM']);
               ?>
             </td>
             <td>
@@ -390,7 +390,7 @@ foreach ($datos as $key => $value) {
           <tr>
             <td>
               <?php
-                    echo $datos4[8]['NOMBREITEM'];
+                    echo utf8_encode($datos4[8]['NOMBREITEM']);
               ?>
             </td>
             <td>
@@ -408,7 +408,7 @@ foreach ($datos as $key => $value) {
           <tr class="fondoTextoTitulo">
               <td style="border:none;"></td>
               <td style="border:none;"></td>
-              <td style="border:none;">Porcentaje de logro del ámbito: <?php echo round($ambito2*100),'%' ; ?> </td>
+              <td style="border:none;" colspan="2">Porcentaje de logro del ámbito: <?php echo round($ambito2*100),'%' ; ?> </td>
         </thead>
     </table>
     <input type="button" value="Ver Grafico" onclick="graficoItemsAmbito2()">
@@ -416,7 +416,7 @@ foreach ($datos as $key => $value) {
 
 <form name="frmIngresoRespuestas" action="" method="post"  enctype="multipart/form-data">
     <div id='messageAT'></div>
-    <h3><?php echo $datos1[2]['NOMBREAMBITO']; ?> <!--(<?php echo round($datos1[2]['PonderacionAmbito']*100),'%';    ?>)--></h3>
+    <h3><?php echo utf8_encode($datos1[2]['NOMBREAMBITO']); ?> <!--(<?php echo round($datos1[2]['PonderacionAmbito']*100),'%';    ?>)--></h3>
     <table width="100%" class="TableDatos">
         <thead>
             <tr class="fondoTextoTitulo">
@@ -430,7 +430,7 @@ foreach ($datos as $key => $value) {
           <tr>
             <td>
               <?php
-                    echo $datos4[9]['NOMBREITEM'];
+                    echo utf8_encode($datos4[9]['NOMBREITEM']);
               ?>
             </td>
             <td>
@@ -452,7 +452,7 @@ foreach ($datos as $key => $value) {
           <tr>
             <td>
               <?php
-                    echo $datos4[10]['NOMBREITEM'];
+                    echo utf8_encode($datos4[10]['NOMBREITEM']);
               ?>
             </td>
             <td>
@@ -468,7 +468,7 @@ foreach ($datos as $key => $value) {
           <tr>
             <td>
               <?php
-                    echo $datos4[11]['NOMBREITEM'];
+                    echo utf8_encode($datos4[11]['NOMBREITEM']);
               ?>
             </td>
             <td>
@@ -484,7 +484,7 @@ foreach ($datos as $key => $value) {
           <tr>
             <td>
               <?php
-                    echo $datos4[12]['NOMBREITEM'];
+                    echo utf8_encode($datos4[12]['NOMBREITEM']);
               ?>
             </td>
             <td>
@@ -502,7 +502,7 @@ foreach ($datos as $key => $value) {
           <tr class="fondoTextoTitulo">
               <td style="border:none;"></td>
               <td style="border:none;"></td>
-              <td style="border:none;">Porcentaje de logro del ámbito: <?php echo round($ambito3*100),'%' ; ?> </td>
+              <td style="border:none;" colspan="2">Porcentaje de logro del ámbito: <?php echo round($ambito3*100),'%' ; ?> </td>
         </thead>
     </table>
     <input type="button" value="Ver Grafico" onclick="graficoItemsAmbito3()">
@@ -510,7 +510,7 @@ foreach ($datos as $key => $value) {
 
 <form name="frmIngresoRespuestas" action="" method="post"  enctype="multipart/form-data">
     <div id='messageAT'></div>
-    <h3><?php echo $datos1[3]['NOMBREAMBITO']; ?> <!--(<?php echo round($datos1[3]['PonderacionAmbito']*100),'%';    ?>)--></h3>
+    <h3><?php echo utf8_encode($datos1[3]['NOMBREAMBITO']); ?> <!--(<?php echo round($datos1[3]['PonderacionAmbito']*100),'%';    ?>)--></h3>
     <table width="100%" class="TableDatos">
         <thead>
             <tr class="fondoTextoTitulo">
@@ -524,7 +524,7 @@ foreach ($datos as $key => $value) {
           <tr>
             <td>
               <?php
-                    echo $datos4[13]['NOMBREITEM'];
+                    echo utf8_encode($datos4[13]['NOMBREITEM']);
               ?>
             </td>
             <td>
@@ -546,7 +546,7 @@ foreach ($datos as $key => $value) {
           <tr>
             <td>
               <?php
-                    echo $datos4[14]['NOMBREITEM'];
+                    echo utf8_encode($datos4[14]['NOMBREITEM']);
               ?>
             </td>
             <td>
@@ -562,7 +562,7 @@ foreach ($datos as $key => $value) {
           <tr>
             <td>
               <?php
-                    echo $datos4[15]['NOMBREITEM'];
+                    echo utf8_encode($datos4[15]['NOMBREITEM']);
               ?>
             </td>
             <td>
@@ -580,7 +580,7 @@ foreach ($datos as $key => $value) {
           <tr class="fondoTextoTitulo">
               <td style="border:none;"></td>
               <td style="border:none;"></td>
-              <td style="border:none;">Porcentaje de logro del ámbito: <?php echo round($ambito4*100),'%' ; ?> </td>
+              <td style="border:none;" colspan="2">Porcentaje de logro del ámbito: <?php echo round($ambito4*100),'%' ; ?> </td>
         </thead>
     </table>
     <input type="button" value="Ver Grafico" onclick="graficoItemsAmbito4()">

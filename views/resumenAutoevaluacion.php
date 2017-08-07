@@ -335,9 +335,9 @@ $total16= $datos[75]['ponderacion_respuesta']+$datos[76]['ponderacion_respuesta'
 <BR>
 <form name="frmIngresoRespuestas" action="" method="post"  enctype="multipart/form-data">
 
-  <h3><?php echo $datos1[0]['NOMBREAMBITO']; ?></h3>
+  <h3><?php echo utf8_encode($datos1[0]['NOMBREAMBITO']); ?></h3>
   <form name="frmIngresoRespuestas" action="" method="post"  enctype="multipart/form-data">
-    <h4><?php echo $datos4[0]['NOMBREITEM'];?></h4>
+    <h4><?php echo utf8_encode($datos4[0]['NOMBREITEM']);?></h4>
       <div id='messageAT'></div>
       <table width="100%" class="TableDatos">
           <thead>
@@ -367,7 +367,7 @@ $total16= $datos[75]['ponderacion_respuesta']+$datos[76]['ponderacion_respuesta'
   </form>
 
   <form name="frmIngresoRespuestas" action="" method="post"  enctype="multipart/form-data">
-    <h4><?php echo $datos4[1]['NOMBREITEM'];?></h4>
+    <h4><?php echo utf8_encode($datos4[1]['NOMBREITEM']);?></h4>
       <div id='messageAT'></div>
       <table width="100%" class="TableDatos">
           <thead>
@@ -396,7 +396,7 @@ $total16= $datos[75]['ponderacion_respuesta']+$datos[76]['ponderacion_respuesta'
   </form>
 
   <form name="frmIngresoRespuestas" action="" method="post"  enctype="multipart/form-data">
-    <h4><?php echo $datos4[2]['NOMBREITEM'];?></h4>
+    <h4><?php echo utf8_encode($datos4[2]['NOMBREITEM']);?></h4>
       <div id='messageAT'></div>
       <table width="100%" class="TableDatos">
           <thead>
@@ -425,7 +425,7 @@ $total16= $datos[75]['ponderacion_respuesta']+$datos[76]['ponderacion_respuesta'
   </form>
 
   <form name="frmIngresoRespuestas" action="" method="post"  enctype="multipart/form-data">
-    <h4><?php echo $datos4[3]['NOMBREITEM'];?></h4>
+    <h4><?php echo utf8_encode($datos4[3]['NOMBREITEM']);?></h4>
       <div id='messageAT'></div>
       <table width="100%" class="TableDatos">
           <thead>
@@ -454,9 +454,9 @@ $total16= $datos[75]['ponderacion_respuesta']+$datos[76]['ponderacion_respuesta'
   </form>
 </form>
 <form name="frmIngresoRespuestas" action="" method="post"  enctype="multipart/form-data">
-  <h3><?php echo $datos1[1]['NOMBREAMBITO']; ?></h3>
+  <h3><?php echo utf8_encode($datos1[1]['NOMBREAMBITO']); ?></h3>
   <form name="frmIngresoRespuestas" action="" method="post"  enctype="multipart/form-data">
-    <h4><?php echo $datos4[4]['NOMBREITEM'];?></h4>
+    <h4><?php echo utf8_encode($datos4[4]['NOMBREITEM']);?></h4>
       <div id='messageAT'></div>
       <table width="100%" class="TableDatos">
           <thead>
@@ -485,7 +485,7 @@ $total16= $datos[75]['ponderacion_respuesta']+$datos[76]['ponderacion_respuesta'
   </form>
 
   <form name="frmIngresoRespuestas" action="" method="post"  enctype="multipart/form-data">
-    <h4><?php echo $datos4[5]['NOMBREITEM'];?></h4>
+    <h4><?php echo utf8_encode($datos4[5]['NOMBREITEM']);?></h4>
       <div id='messageAT'></div>
       <table width="100%" class="TableDatos">
           <thead>
@@ -514,7 +514,7 @@ $total16= $datos[75]['ponderacion_respuesta']+$datos[76]['ponderacion_respuesta'
   </form>
 
   <form name="frmIngresoRespuestas" action="" method="post"  enctype="multipart/form-data">
-      <h4><?php echo $datos4[6]['NOMBREITEM'];?></h4>
+      <h4><?php echo utf8_encode($datos4[6]['NOMBREITEM']);?></h4>
       <div id='messageAT'></div>
       <table width="100%" class="TableDatos">
           <thead>
@@ -543,7 +543,7 @@ $total16= $datos[75]['ponderacion_respuesta']+$datos[76]['ponderacion_respuesta'
   </form>
 
   <form name="frmIngresoRespuestas" action="" method="post"  enctype="multipart/form-data">
-    <h4><?php echo $datos4[7]['NOMBREITEM'];?></h4>
+    <h4><?php echo utf8_encode($datos4[7]['NOMBREITEM']);?></h4>
       <div id='messageAT'></div>
       <table width="100%" class="TableDatos">
           <thead>
@@ -572,7 +572,7 @@ $total16= $datos[75]['ponderacion_respuesta']+$datos[76]['ponderacion_respuesta'
   </form>
 
   <form name="frmIngresoRespuestas" action="" method="post"  enctype="multipart/form-data">
-    <h4><?php echo $datos4[8]['NOMBREITEM'];?></h4>
+    <h4><?php echo utf8_encode($datos4[8]['NOMBREITEM']);?></h4>
       <div id='messageAT'></div>
       <table width="100%" class="TableDatos">
           <thead>
@@ -601,9 +601,9 @@ $total16= $datos[75]['ponderacion_respuesta']+$datos[76]['ponderacion_respuesta'
   </form>
 </form>
 <form name="frmIngresoRespuestas" action="" method="post"  enctype="multipart/form-data">
-  <h3><?php echo $datos1[2]['NOMBREAMBITO']; ?></h3>
+  <h3><?php echo utf8_encode($datos1[2]['NOMBREAMBITO']); ?></h3>
   <form name="frmIngresoRespuestas" action="" method="post"  enctype="multipart/form-data">
-    <h4><?php echo $datos4[9]['NOMBREITEM'];?></h4>
+    <h4><?php echo utf8_encode($datos4[9]['NOMBREITEM']);?></h4>
       <div id='messageAT'></div>
       <table width="100%" class="TableDatos">
           <thead>
@@ -632,7 +632,7 @@ $total16= $datos[75]['ponderacion_respuesta']+$datos[76]['ponderacion_respuesta'
   </form>
 
   <form name="frmIngresoRespuestas" action="" method="post"  enctype="multipart/form-data">
-    <h4><?php echo $datos4[10]['NOMBREITEM'];?></h4>
+    <h4><?php echo utf8_encode($datos4[10]['NOMBREITEM']);?></h4>
       <div id='messageAT'></div>
       <table width="100%" class="TableDatos">
           <thead>
@@ -661,7 +661,7 @@ $total16= $datos[75]['ponderacion_respuesta']+$datos[76]['ponderacion_respuesta'
   </form>
 
   <form name="frmIngresoRespuestas" action="" method="post"  enctype="multipart/form-data">
-    <h4><?php echo $datos4[11]['NOMBREITEM'];?></h4>
+    <h4><?php echo utf8_encode($datos4[11]['NOMBREITEM']);?></h4>
       <div id='messageAT'></div>
       <table width="100%" class="TableDatos">
           <thead>
@@ -690,7 +690,7 @@ $total16= $datos[75]['ponderacion_respuesta']+$datos[76]['ponderacion_respuesta'
   </form>
 
   <form name="frmIngresoRespuestas" action="" method="post"  enctype="multipart/form-data">
-    <h4><?php echo $datos4[12]['NOMBREITEM'];?></h4>
+    <h4><?php echo utf8_encode($datos4[12]['NOMBREITEM']);?></h4>
       <div id='messageAT'></div>
       <table width="100%" class="TableDatos">
           <thead>
@@ -719,9 +719,9 @@ $total16= $datos[75]['ponderacion_respuesta']+$datos[76]['ponderacion_respuesta'
   </form>
 </form>
 <form name="frmIngresoRespuestas" action="" method="post"  enctype="multipart/form-data">
-  <h3><?php echo $datos1[3]['NOMBREAMBITO']; ?></h3>
+  <h3><?php echo utf8_encode($datos1[3]['NOMBREAMBITO']); ?></h3>
   <form name="frmIngresoRespuestas" action="" method="post"  enctype="multipart/form-data">
-    <h4><?php echo $datos4[13]['NOMBREITEM'];?></h4>
+    <h4><?php echo utf8_encode($datos4[13]['NOMBREITEM']);?></h4>
       <div id='messageAT'></div>
       <table width="100%" class="TableDatos">
           <thead>
@@ -750,7 +750,7 @@ $total16= $datos[75]['ponderacion_respuesta']+$datos[76]['ponderacion_respuesta'
   </form>
 
   <form name="frmIngresoRespuestas" action="" method="post"  enctype="multipart/form-data">
-    <h4><?php echo $datos4[14]['NOMBREITEM'];?></h4>
+    <h4><?php echo utf8_encode($datos4[14]['NOMBREITEM']);?></h4>
       <div id='messageAT'></div>
       <table width="100%" class="TableDatos">
           <thead>
@@ -779,7 +779,7 @@ $total16= $datos[75]['ponderacion_respuesta']+$datos[76]['ponderacion_respuesta'
   </form>
 
   <form name="frmIngresoRespuestas" action="" method="post"  enctype="multipart/form-data">
-    <h4><?php echo $datos4[15]['NOMBREITEM'];?></h4>
+    <h4><?php echo utf8_encode($datos4[15]['NOMBREITEM']);?></h4>
       <div id='messageAT'></div>
       <table width="100%" class="TableDatos">
           <thead>

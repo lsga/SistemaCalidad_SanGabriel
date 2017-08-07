@@ -208,7 +208,7 @@ foreach ($datos as $key => $value) {
         </thead>
         <tbody>
       <tr>
-                       <td><input type="text" name="txtevidencia" id="txtevidencia" value="<?php echo $value["descripcionevidencia"]; ?>" <?php echo $editar;?>/>
+                       <td><input type="text" name="txtevidencia" id="txtevidencia" value="<?php echo utf8_encode($value["descripcionevidencia"]); ?>" <?php echo $editar;?>/>
                        	<td>
 
                             <input type="hidden" name="txt_evidenciapdf_existe" id="txt_evidenciapdf_existe" value="<?php echo $value["evidencia"];?>" readonly="readonly">
@@ -242,7 +242,7 @@ foreach ($datos as $key => $value) {
         <tbody>
 
          <td>
-             <textarea id="txtobservaciones"  name="txtobservaciones" rows="4"  <?php echo $editar;?> ><?php  echo $value["OBSERVACION"]?> </textarea>
+             <textarea id="txtobservaciones"  name="txtobservaciones" rows="4"  <?php echo $editar;?> ><?php  echo utf8_encode($value["OBSERVACION"])?> </textarea>
 
         </tbody>
     </table>
@@ -257,7 +257,7 @@ foreach ($datos as $key => $value) {
         <tbody>
 
          <td>
-         <textarea id="txtComentario"  name="txtComentario" rows="4"  <?php echo $editarCom;?> value="<?php echo $value["COMENTARIO"]?>"> </textarea>
+         <textarea id="txtComentario"  name="txtComentario" rows="4"  <?php echo $editarCom;?> value="<?php echo utf8_encode($value["COMENTARIO"])?>"> </textarea>
 
         </tbody>
     </table>

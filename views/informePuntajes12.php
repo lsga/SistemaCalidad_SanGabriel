@@ -20,10 +20,10 @@ $sumartoria12= $datos[56]['ponderacion_respuesta']+$datos[57]['ponderacion_respu
 
       <?php
           $dataPoints = array(
-              array("y" => $datos[56]['ponderacion_respuesta'], "label" => $datos[56]['indicador_decripcion'].' '.$datos[56]['descripcionrespuesta']),
-              array("y" => $datos[57]['ponderacion_respuesta'], "label" => $datos[57]['indicador_decripcion'].' '.$datos[57]['descripcionrespuesta']),
-              array("y" => $datos[58]['ponderacion_respuesta'], "label" => $datos[58]['indicador_decripcion'].' '.$datos[58]['descripcionrespuesta']),
-              array("y" => $datos[59]['ponderacion_respuesta'], "label" => $datos[59]['indicador_decripcion'].' '.$datos[59]['descripcionrespuesta']),
+              array("y" => $datos[56]['ponderacion_respuesta'], "label" => $datos[56]['indicador_decripcion'].' '.utf8_encode($datos[56]['descripcionrespuesta'])),
+              array("y" => $datos[57]['ponderacion_respuesta'], "label" => $datos[57]['indicador_decripcion'].' '.utf8_encode($datos[57]['descripcionrespuesta'])),
+              array("y" => $datos[58]['ponderacion_respuesta'], "label" => $datos[58]['indicador_decripcion'].' '.utf8_encode($datos[58]['descripcionrespuesta'])),
+              array("y" => $datos[59]['ponderacion_respuesta'], "label" => $datos[59]['indicador_decripcion'].' '.utf8_encode($datos[59]['descripcionrespuesta'])),
           );
       ?>
 
@@ -37,7 +37,7 @@ $sumartoria12= $datos[56]['ponderacion_respuesta']+$datos[57]['ponderacion_respu
                       theme: "theme2",
                       animationEnabled: true,
                       title: {
-                          text: "<?php echo $datos4[11]['NOMBREITEM'] ?> <?php echo round($total12*100),'%' ?>"
+                          text: "<?php echo utf8_encode($datos4[11]['NOMBREITEM']) ?> <?php echo round($total12*100),'%' ?>"
                       },
                       axisY: {
                           title: "Puntos",

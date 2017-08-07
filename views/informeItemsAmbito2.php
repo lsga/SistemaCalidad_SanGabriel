@@ -37,11 +37,11 @@ $sumartoria9= $datos[42]['ponderacion_respuesta']+$datos[43]['ponderacion_respue
 
       <?php
           $dataPoints = array(
-            array("y" => round($total5*100),'%', label => $datos4[4]['NOMBREITEM']),
-            array("y" => round($total6*100),'%', label => $datos4[5]['NOMBREITEM']),
-            array("y" => round($total7*100),'%', label => $datos4[6]['NOMBREITEM']),
-            array("y" => round($total8*100),'%', label => $datos4[7]['NOMBREITEM']),
-            array("y" => round($total9*100),'%', label => $datos4[8]['NOMBREITEM'])
+            array("y" => round($total5*100),'%', label => utf8_encode($datos4[4]['NOMBREITEM'])),
+            array("y" => round($total6*100),'%', label => utf8_encode($datos4[5]['NOMBREITEM'])),
+            array("y" => round($total7*100),'%', label => utf8_encode($datos4[6]['NOMBREITEM'])),
+            array("y" => round($total8*100),'%', label => utf8_encode($datos4[7]['NOMBREITEM'])),
+            array("y" => round($total9*100),'%', label => utf8_encode($datos4[8]['NOMBREITEM']))
           );
       ?>
 
@@ -55,7 +55,7 @@ $sumartoria9= $datos[42]['ponderacion_respuesta']+$datos[43]['ponderacion_respue
                     theme: "theme2",
                     animationEnabled: true,
                     title: {
-                        text: "<?php echo $datos1[1]['NOMBREAMBITO'] ?> <?php echo round($ambito2*100),'%' ?>"
+                        text: "<?php echo utf8_encode($datos1[1]['NOMBREAMBITO']) ?> <?php echo round($ambito2*100),'%' ?>"
                     },
                     axisY: {
                         title: "Porcentajes",

@@ -1,13 +1,13 @@
 	<script>
-    
+
 var selector = '.nav a';
 
 $(selector).on('click', function(){
     $(selector).removeClass('active');
     $(this).addClass('active');
 });
- 
- 
+
+
 </script>
 
 
@@ -15,7 +15,7 @@ $(selector).on('click', function(){
  a.active {
     color: red;
 }
-</style>    
+</style>
 
 <?php
 session_start();
@@ -48,9 +48,9 @@ foreach ($datos2 as $key => $value) {
    $tabla2 .= "
 
                  <ul id='myList'>
-                      <a href=# onClick= \"procesarItem('".$datos2[$key]['ID_ITEM']."','".$datos2[$key]['NOMBREITEM']."')\" ><td>".$datos2[$key]['NOMBREITEM']."</td></a>
-                     
-                       <div id='div".$datos2[$key]['ID_ITEM']."'></div> 
+                      <a href=# onClick= \"procesarItem('".$datos2[$key]['ID_ITEM']."','".$datos2[$key]['NOMBREITEM']."')\" ><td>".utf8_encode($datos2[$key]['NOMBREITEM'])."</td></a>
+
+                       <div id='div".$datos2[$key]['ID_ITEM']."'></div>
                  </ul>
 
 

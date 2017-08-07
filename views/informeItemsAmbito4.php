@@ -29,9 +29,9 @@ $ambito4=($total14*$datos4[13]['PonderacionItem'])+($total15*$datos4[14]['Ponder
 
       <?php
           $dataPoints = array(
-            array("y" => round($total14*100),'%', label => $datos4[13]['NOMBREITEM']),
-            array("y" => round($total15*100),'%', label => $datos4[14]['NOMBREITEM']),
-            array("y" => round($total16*100),'%', label => $datos4[15]['NOMBREITEM'])
+            array("y" => round($total14*100),'%', label => utf8_encode($datos4[13]['NOMBREITEM'])),
+            array("y" => round($total15*100),'%', label => utf8_encode($datos4[14]['NOMBREITEM'])),
+            array("y" => round($total16*100),'%', label => utf8_encode($datos4[15]['NOMBREITEM']))
           );
       ?>
 
@@ -45,7 +45,7 @@ $ambito4=($total14*$datos4[13]['PonderacionItem'])+($total15*$datos4[14]['Ponder
                     theme: "theme2",
                     animationEnabled: true,
                     title: {
-                        text: "<?php echo $datos1[3]['NOMBREAMBITO'] ?> <?php echo round($ambito4*100),'%' ?>"
+                        text: "<?php echo utf8_encode($datos1[3]['NOMBREAMBITO']) ?> <?php echo round($ambito4*100),'%' ?>"
                     },
                     axisY: {
                         title: "Porcentajes",

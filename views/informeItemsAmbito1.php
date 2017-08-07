@@ -34,10 +34,10 @@ require_once dirname(dirname(__FILE__)).'/controller/ambito_controller.php';
 
       <?php
           $dataPoints = array(
-            array("y" => round($total1*100),'%', label => $datos4[0]['NOMBREITEM']),
-            array("y" => round($total2*100),'%', label => $datos4[1]['NOMBREITEM']),
-            array("y" => round($total3*100),'%', label => $datos4[2]['NOMBREITEM']),
-            array("y" => round($total4*100),'%', label => $datos4[3]['NOMBREITEM'])
+            array("y" => round($total1*100),'%', label => utf8_encode($datos4[0]['NOMBREITEM'])),
+            array("y" => round($total2*100),'%', label => utf8_encode($datos4[1]['NOMBREITEM'])),
+            array("y" => round($total3*100),'%', label => utf8_encode($datos4[2]['NOMBREITEM'])),
+            array("y" => round($total4*100),'%', label => utf8_encode($datos4[3]['NOMBREITEM']))
           );
       ?>
 
@@ -51,7 +51,7 @@ require_once dirname(dirname(__FILE__)).'/controller/ambito_controller.php';
                     theme: "theme2",
                     animationEnabled: true,
                     title: {
-                        text: "<?php echo $datos1[0]['NOMBREAMBITO'] ?> <?php echo round($ambito1*100),'%' ?>"
+                        text: "<?php echo utf8_encode($datos1[0]['NOMBREAMBITO']) ?> <?php echo round($ambito1*100),'%' ?>"
                     },
                     axisY: {
                         title: "Porcentajes",

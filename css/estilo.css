@@ -30,7 +30,7 @@ body{
     position:absolute;
     top: 180px;
     left: 170px;
-   
+
 }
 
 #columnaizq ul{                          /*propiedad para desaparecer puntos de lista*/
@@ -88,9 +88,9 @@ li {
     float: left;
     height: 500px;
     position:absolute;
-    top: 230px;
+    top: 240px;
     left: 450px;
-    
+
 }
 
 .clear{
@@ -135,7 +135,7 @@ li {
 
 .alertaError{
 	color: #E30913;
-	
+
     box-shadow:inset 0px 0px 2px 0px rgba(255, 0, 0, 0.75);
 }
 
@@ -179,7 +179,7 @@ li {
 }
 
 input[type="radio"] {
- 
+
      vertical-align: baseline;
 
 }
@@ -187,6 +187,6 @@ input[type="radio"] {
 textarea{
   height: 8em;
   width: 50em;
-  
-    
+
+
 }

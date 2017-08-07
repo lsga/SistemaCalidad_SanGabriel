@@ -33,10 +33,10 @@ $sumartoria13= $datos[60]['ponderacion_respuesta']+$datos[61]['ponderacion_respu
 
       <?php
           $dataPoints = array(
-            array("y" => round($total10*100),'%', label => $datos4[9]['NOMBREITEM']),
-            array("y" => round($total11*100),'%', label => $datos4[10]['NOMBREITEM']),
-            array("y" => round($total12*100),'%', label => $datos4[11]['NOMBREITEM']),
-            array("y" => round($total13*100),'%', label => $datos4[12]['NOMBREITEM'])
+            array("y" => round($total10*100),'%', label => utf8_encode($datos4[9]['NOMBREITEM'])),
+            array("y" => round($total11*100),'%', label => utf8_encode($datos4[10]['NOMBREITEM'])),
+            array("y" => round($total12*100),'%', label => utf8_encode($datos4[11]['NOMBREITEM'])),
+            array("y" => round($total13*100),'%', label => utf8_encode($datos4[12]['NOMBREITEM']))
           );
       ?>
 
@@ -50,7 +50,7 @@ $sumartoria13= $datos[60]['ponderacion_respuesta']+$datos[61]['ponderacion_respu
                     theme: "theme2",
                     animationEnabled: true,
                     title: {
-                        text: "<?php echo $datos1[2]['NOMBREAMBITO'] ?> <?php echo round($ambito3*100),'%' ?>"
+                        text: "<?php echo utf8_encode($datos1[2]['NOMBREAMBITO']) ?> <?php echo round($ambito3*100),'%' ?>"
                     },
                     axisY: {
                         title: "Porcentajes",

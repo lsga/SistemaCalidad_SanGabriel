@@ -21,11 +21,11 @@ $sumartoria15= $datos[70]['ponderacion_respuesta']+$datos[71]['ponderacion_respu
 
       <?php
           $dataPoints = array(
-              array("y" => $datos[70]['ponderacion_respuesta'], "label" => $datos[70]['indicador_decripcion'].' '.$datos[70]['descripcionrespuesta']),
-              array("y" => $datos[71]['ponderacion_respuesta'], "label" => $datos[71]['indicador_decripcion'].' '.$datos[71]['descripcionrespuesta']),
-              array("y" => $datos[72]['ponderacion_respuesta'], "label" => $datos[72]['indicador_decripcion'].' '.$datos[72]['descripcionrespuesta']),
-              array("y" => $datos[73]['ponderacion_respuesta'], "label" => $datos[73]['indicador_decripcion'].' '.$datos[73]['descripcionrespuesta']),
-              array("y" => $datos[74]['ponderacion_respuesta'], "label" => $datos[74]['indicador_decripcion'].' '.$datos[74]['descripcionrespuesta']),
+              array("y" => $datos[70]['ponderacion_respuesta'], "label" => $datos[70]['indicador_decripcion'].' '.utf8_encode($datos[70]['descripcionrespuesta'])),
+              array("y" => $datos[71]['ponderacion_respuesta'], "label" => $datos[71]['indicador_decripcion'].' '.utf8_encode($datos[71]['descripcionrespuesta'])),
+              array("y" => $datos[72]['ponderacion_respuesta'], "label" => $datos[72]['indicador_decripcion'].' '.utf8_encode($datos[72]['descripcionrespuesta'])),
+              array("y" => $datos[73]['ponderacion_respuesta'], "label" => $datos[73]['indicador_decripcion'].' '.utf8_encode($datos[73]['descripcionrespuesta'])),
+              array("y" => $datos[74]['ponderacion_respuesta'], "label" => $datos[74]['indicador_decripcion'].' '.utf8_encode($datos[74]['descripcionrespuesta'])),
           );
       ?>
 
@@ -39,7 +39,7 @@ $sumartoria15= $datos[70]['ponderacion_respuesta']+$datos[71]['ponderacion_respu
                       theme: "theme2",
                       animationEnabled: true,
                       title: {
-                          text: "<?php echo $datos4[14]['NOMBREITEM'] ?> <?php echo round($total15*100),'%' ?>"
+                          text: "<?php echo utf8_encode($datos4[14]['NOMBREITEM']) ?> <?php echo round($total15*100),'%' ?>"
                       },
                       axisY: {
                           title: "Puntos",
